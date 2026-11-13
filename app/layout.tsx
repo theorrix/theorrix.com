@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Fira_Code } from "next/font/google";
+import Script from "next/script";
 import "./globals.css";
 
 const geistSans = Geist({
@@ -207,6 +208,27 @@ export default function RootLayout({
         />
       </head>
       <body>
+        {/* Google Tag Manager / Analytics */}
+        <Script
+          src="https://www.googletagmanager.com/gtm.js?id=GTM-NF46WF2G"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+          `}
+        </Script>
+        <noscript>
+          <iframe
+            src="https://www.googletagmanager.com/ns.html?id=GTM-NF46WF2G"
+            height="0"
+            width="0"
+            style={{ display: "none", visibility: "hidden" }}
+          />
+        </noscript>
+
         <div className="bg-grid" aria-hidden="true" />
         {children}
       </body>
