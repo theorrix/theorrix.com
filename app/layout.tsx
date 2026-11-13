@@ -200,6 +200,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const clarityId = process.env.NEXT_PUBLIC_CLARITY_ID;
+  const gaId = process.env.NEXT_PUBLIC_GA_MEASUREMENT_ID;
   const gtmId = process.env.NEXT_PUBLIC_GTM_ID;
 
   return (
@@ -224,11 +225,11 @@ export default function RootLayout({
           </Script>
         )}
 
-        {/* Google Tag Manager / Analytics */}
-        {gtmId && (
+        {/* Google Analytics 4 (GA4) */}
+        {gaId && (
           <>
             <Script
-              src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+              src={`https://www.googletagmanager.com/gtag/js?id=${gaId}`}
               strategy="afterInteractive"
             />
             <Script id="google-analytics" strategy="afterInteractive">
@@ -236,8 +237,21 @@ export default function RootLayout({
                 window.dataLayer = window.dataLayer || [];
                 function gtag(){dataLayer.push(arguments);}
                 gtag('js', new Date());
+                gtag('config', '${gaId}', {
+                  page_path: window.location.pathname,
+                });
               `}
             </Script>
+          </>
+        )}
+
+        {/* Google Tag Manager (Fallback if GA4 not directly specified) */}
+        {!gaId && gtmId && (
+          <>
+            <Script
+              src={`https://www.googletagmanager.com/gtm.js?id=${gtmId}`}
+              strategy="afterInteractive"
+            />
             <noscript>
               <iframe
                 src={`https://www.googletagmanager.com/ns.html?id=${gtmId}`}
