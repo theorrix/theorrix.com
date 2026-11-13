@@ -1,6 +1,6 @@
 # Theorrix — From Nothing to Something
 
-The official web platform for [theorrix.com](https://theorrix.com) — an independent online technology learning platform.
+The official web platform repository for [theorrix.com](https://theorrix.com) — an independent online technology learning platform.
 
 ---
 
@@ -8,47 +8,22 @@ The official web platform for [theorrix.com](https://theorrix.com) — an indepe
 
 Theorrix is built on a single conviction: **From Nothing to Something.**
 
-Our mission is to make learning technology easier, clearer, and more practical. We deconstruct complex engineering concepts into hands-on explanations and reproducible open-source projects.
+Our mission is to make learning technology easier, clearer, and more practical. We deconstruct complex engineering concepts into hands-on explanations and reproducible open-source projects for curious minds and builders worldwide.
 
-### Learning Areas
+---
+
+## What We Cover
 
 - **Full-Stack Development:** Modern web and application engineering taught across diverse languages, frameworks, and architectures rather than a single fixed stack.
 - **System Design:** Distributed backends, concurrency models, database architecture, streaming protocols, and production reliability.
 - **Artificial Intelligence:** AI engineering, autonomous agent loops, vector search, RAG pipelines, and model context integration.
-- **Upcoming Disciplines:** Data Structures and Algorithms, Programming Fundamentals, Database Management, DevOps, and Cloud Computing.
-
----
-
-## Tech Stack
-
-- **Framework:** Next.js 16 (App Router, Turbopack)
-- **Language:** TypeScript
-- **UI:** React 19, Pure Vanilla CSS
-- **Typography:** Fira Code, Geist
-- **Theme:** Pitch Carbon (#09090b) and Precision Emerald (#10b981)
-- **SEO:** Schema.org EducationalOrganization, 1200x630 OpenGraph cards, XML sitemap, robots.txt, Web App Manifest
-
----
-
-## Getting Started
-
-```bash
-# Install dependencies
-npm install
-
-# Start development server
-npm run dev
-
-# Build for production
-npm run build
-
-# Start production server
-npm start
-```
+- **Future Tracks:** Data Structures and Algorithms, Programming Fundamentals, Database Management, DevOps, and Cloud Computing.
 
 ---
 
 ## Official Platforms & Community
+
+Follow us across our official channels for tutorials, project walkthroughs, architecture breakdowns, and learning updates:
 
 - **Website:** [theorrix.com](https://theorrix.com)
 - **GitHub:** [github.com/theorrix](https://github.com/theorrix)
@@ -63,7 +38,8 @@ npm start
 
 ## Contact
 
-For technical inquiries, educational feedback, or collaboration:
+Have a question, an idea, or want to collaborate?
+
 - **Email:** [theorrixhq@gmail.com](mailto:theorrixhq@gmail.com)
 
 ---
